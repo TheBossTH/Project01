@@ -41,7 +41,6 @@ $query = mysqli_query($conn, $sql_fatch_products);
 
 
     <div class="section">
-        <h1>สวัสดี : [ <?php echo $username ?> ]</h1>
     </div>
     <div class="container">
 

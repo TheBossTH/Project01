@@ -8,8 +8,7 @@ if ($_SESSION['username'] == null) {
 }
 
 if ($_POST['name'] != null && $_POST['value'] != null) {
-    $sql = "UPDATE product SET name='" . trim($_POST['name']) . "' , SET value='" . trim($_POST['value']) . "'
-    WHERE id='" . $_POST['id'] . "'";
+    $sql = "UPDATE product SET name = '" . trim($_POST['name']) . "' ,value = '" . trim($_POST['value']) . "' WHERE id = '" . $_POST['id'] . "'";
     if ($conn->query($sql)) {
         echo "<script>alert('แก้ไขสำเร็จ');</script>";
         header("Refresh:0 , url=index.php");
