@@ -1,6 +1,6 @@
 <?php
 if (trim($_POST['username']) == null || trim($_POST['password']) == null) {
-    echo "<script>alert('กรุณากรอกข้อมูล');</script>";
+    echo "<script>alert('กรุณากรอกข้อมูลให้ครบถ้วน');</script>";
     header("Refresh:0 , url=index.html");
 } else {
     require_once "./Database/Database.php";
