@@ -8,33 +8,33 @@
 
 <body>
     <div class="section">
-        <h1>Register</h1>
+        <h1>สมัครสมาชิก</h1>
     </div>
     <div class="container">
         <form method="POST" action="registerconfirm.php">
             <div class="form-group">
-                <label for="exampleInputEmail1">Username</label>
+                <label for="exampleInputEmail1">ชื่อผู้ใช้</label>
                 <input type="text" class="form-control" name="username" required />
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Name - Surname</label>
-                <input type="text" class="form-control" name="name-surname" required />
+                <label for="exampleInputEmail1">ชื่อ - นามสกุล</label>
+                <input type="text" class="form-control" name="namesurname" required />
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
+                <label for="exampleInputPassword1">รหัสผ่าน</label>
                 <input type="password" class="form-control" name="password" required />
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Confirm Password</label>
+                <label for="exampleInputPassword1">ยืนยันรหัสผ่าน</label>
                 <input type="password" class="form-control" name="cf-password" required />
             </div>
             <div class="center">
-                <button type="submit" class="btn btn-success">Confirm</button>
+                <button type="submit" class="btn btn-success">สมัครสมาชิก</button>
             </div>
         </form>
 
         <div class="center">
-            <a name="" class="btn btn-light" href="index.html" role="button">Already have an account? Sign in</a>
+            <a name="" class="btn btn-light" href="index.html" role="button">มีบัญชีชื่อผู้ใช้แล้ว? เข้าสู่ระบบ</a>
         </div>
 
     </div>

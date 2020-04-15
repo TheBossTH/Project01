@@ -25,7 +25,7 @@ $query = mysqli_query($conn, $sql_fatch_products);
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Home</a>
+        <a class="navbar-brand" href="index.php">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -41,13 +41,12 @@ $query = mysqli_query($conn, $sql_fatch_products);
 
 
     <div class="section">
-        <h1>สวัสดี : [ <?php echo $username ?> ]</h1>
     </div>
     <div class="container">
 
-        <form>
+        <form method="POST" action="editconfirm.php">
             <div class="form-group">
-                <h1>รายการสินค้า</h1>
+                <h1>แก้ไข</h1>
                 <table class="table table-hover">
                     <thead>
                         <tr>
@@ -75,13 +74,23 @@ $query = mysqli_query($conn, $sql_fatch_products);
                                         ลบ
                                     </a></td>
                             </tr>
-
                         <?php } ?>
                     </tbody>
                 </table>
             </div>
-            <a name="add" id="" class="btn btn-success" href="add.php" role="button">เพิ่มรายการ</a>
+            <div class="container">
+                <div class="form-group">
+                    <label>ชื่อรายการ</label>
+                    <input type="text" class="form-control" value="<?php echo $_GET['message']; ?>" name="name" required />
+                </div>
+                <div class="form-group">
+                    <label>จำนวน</label>
+                    <input type="text" class="form-control" name="value" required />
+                    <input type="hidden" value="<?php echo $_GET['id'] ?>" name="id" />
+                </div>
+                <button type="submit" class="btn btn-warning">แก้ไข</button>
 
+            </div>
         </form>
     </div>
     <!-- Optional JavaScript -->
