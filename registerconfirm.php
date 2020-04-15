@@ -7,12 +7,15 @@ if ($_POST['username'] != null && $_POST['password'] == $_POST['cf-password'] &&
     if ($conn->query($sql)) {
         echo "<script>alert('สมัครสมาชิกสำเร็จ');</script>";
         header("Refresh:0 , url=index.html");
+        exit();
     } else {
         echo "<script>alert('สมัครสมาชิกไม่สำเร็จ กรุณากรอกข้อมูลใหม่');</script>";
         header("Refresh:0 , url=register.php");
+        exit();
     }
     echo $_POST['text_todo'];
 } else {
     echo "<script>alert('กรุณากรอกข้อมูลครบถ้วน หรือรหัสผ่านไม่ตรงกัน');</script>";
     header("Refresh:0 , url=register.php");
+    exit();
 }

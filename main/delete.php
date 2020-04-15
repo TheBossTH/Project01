@@ -4,6 +4,7 @@ require_once "../Database/Database.php";
 if ($_SESSION['username'] == null) {
     echo "<script>alert('กรุณาเข้าสู่ระบบ');</script>";
     header("Refresh:0 , url=../index.html");
+    exit();
 }
 
 $delete_num = $_GET['id'];
@@ -13,7 +14,9 @@ $row = mysqli_fetch_assoc($query_delete, MYSQLI_ASSOC);
 if (!$row) {
     echo "<script>alert('ลบสำเร็จ');</script>";
     header("Refresh: 0 , url=index.php");
+    exit();
 } else {
     echo "<script>alert('ลบไม่สำเร็จ');</script>";
     header("Refresh: 0 , url=index.php");
+    exit();
 }
