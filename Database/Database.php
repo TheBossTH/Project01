@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$dbname = "basicphp";
+$dbname = "project01";
 $conn = new mysqli($host, $user, $pass, $dbname);
 mysqli_query($conn, "SET character_set_result=utf8");
 if ($conn->connect_error) {
